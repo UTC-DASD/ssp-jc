@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private RigidBody2D rb2D;
+    private Rigidbody2D rb2D;
     private float moveSpeed;
     private float jumpForce;
     private bool isJumping;
@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb2D = gameObject.GetComponent<RigidBody2D>();
+        rb2D = gameObject.GetComponent<Rigidbody2D>();
 
         moveSpeed = 3f;
         jumpForce = 60f;
