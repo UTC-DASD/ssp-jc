@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,26 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
-    private 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
-=======
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerController : MonoBehaviour
-{
     private Rigidbody2D rb2D;
     private float moveSpeed;
     private float jumpForce;
@@ -33,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private float moveHorizontal;
     private float moveVertical;
     // Start is called before the first frame update
+    
     void Start()
     {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
@@ -57,4 +37,3 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
->>>>>>> 29abf71a7008d87cab5a7d450f47fd29b1851bcb
