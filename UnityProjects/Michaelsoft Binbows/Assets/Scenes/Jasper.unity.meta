@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:UnityProjects/Michaelsoft Binbows/Assets/Scenes/Jasper.unity.meta
 guid: 537cf4f1705f4c14f9f757290c32ff3f
+========
+guid: 3f437490403e3a74595d04ffcaaf499e
+folderAsset: yes
+>>>>>>>> 0ffa373104d4cd3204fed5f27039bac8027ea406:UnityProjects/Michaelsoft Binbows/Assets/Scripts.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
