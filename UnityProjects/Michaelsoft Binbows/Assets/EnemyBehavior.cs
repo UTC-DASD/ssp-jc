@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    [SeralizeField] float moveSpeed = 1f;
+    [SerializeField] float moveSpeed = 1f;
 
     Rigidbody2D myRigidbody;
     BoxCollider2D myBoxCollider;
@@ -22,20 +22,20 @@ public class EnemyBehavior : MonoBehaviour
     {
         if(IsFacingRight())
         {
-            myRigidbody.velocity = new Vector2(movespeed, 0f)
+            myRigidbody.velocity = new Vector2(moveSpeed, 0f);
         } else
         {
-            myRigidbody.velocity = new Vector2(-movespeed, 0f)
+            myRigidbody.velocity = new Vector2(-moveSpeed, 0f);
         }
     }
 
-    privatebool IsFacingRight()
+    private bool IsFacingRight()
     {
         return transform.localScale.x > Mathf.Epsilon;
     }
 
-    private void private void OnTriggerExit2D(Collider2D collision) 
+    private void OnTriggerExit2D(Collider2D collision) 
     {
-        transform.localscale = new Vector2(-(Mathf.Sign(myRigidbody.velocity.x)), transform.localscale.y);
+        transform.localScale = new Vector2(-(Mathf.Sign(myRigidbody.velocity.x)), transform.localScale.y);
     }
 }
