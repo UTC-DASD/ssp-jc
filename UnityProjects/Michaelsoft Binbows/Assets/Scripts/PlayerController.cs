@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2D;
     private float moveSpeed;
     private float jumpForce;
-    private bool isJumping;
+    [SerializeField] private bool isJumping;
     private float moveHorizontal;
     private float moveVertical;
     // Start is called before the first frame update
@@ -27,6 +27,11 @@ public class PlayerController : MonoBehaviour
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
+
+        if(!isJumping && Input.GetKeyDown("space"))
+        {
+            rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+        }
     }
 
     void FixedUpdate()
@@ -40,7 +45,6 @@ public class PlayerController : MonoBehaviour
         {
             rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
         }
-
     }
 
     void OnTriggerEnter2D(Collider2D collision)
