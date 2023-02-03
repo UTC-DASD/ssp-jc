@@ -4639,7 +4639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5582303092927587708, guid: a828bca72c4580542aae3aeac1616d33, type: 3}
       propertyPath: m_Name
-      value: Michael (2)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5582303092927587708, guid: a828bca72c4580542aae3aeac1616d33, type: 3}
       propertyPath: m_TagString
