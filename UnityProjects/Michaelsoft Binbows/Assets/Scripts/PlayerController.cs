@@ -75,16 +75,24 @@ public class PlayerController : MonoBehaviour
         if(moveHorizontal > 0.1f || moveHorizontal < -0.1f)
         {
             rb2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
+            playerAnim.SetBool("IsIdle", false);
             playerAnim.SetBool("IsWalking", true);
+            playerAnim.SetBool("IsJumping", false);
+
+        }
+        else if (!isJumping && moveVertical > 0.1f)
+        {
+            rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
+            playerAnim.SetBool("IsIdle", false);
+            playerAnim.SetBool("IsWalking", false);
+            playerAnim.SetBool("IsJumping", true);
+            
         }
         else
         {
+            playerAnim.SetBool("IsIdle", true);
             playerAnim.SetBool("IsWalking", false);
-        }
-
-        if (!isJumping && moveVertical > 0.1f)
-        {
-            rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
+            playerAnim.SetBool("IsJumping", false);
         }
     }
 
