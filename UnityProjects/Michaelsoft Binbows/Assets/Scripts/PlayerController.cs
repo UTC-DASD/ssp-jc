@@ -40,6 +40,11 @@ public class PlayerController : MonoBehaviour
         if(!isJumping && Input.GetKeyDown("space"))
         {
             rb2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            /*
+            playerAnim.SetBool("IsIdle", false);
+            playerAnim.SetBool("IsWalking", false);
+            playerAnim.SetBool("IsJumping", true);
+            */
         }
         //playerSprite.flipX
         if(moveHorizontal > 0 && playerSprite.flipX)
@@ -68,6 +73,34 @@ public class PlayerController : MonoBehaviour
             Vector3 trailLeftOffset = new Vector3 (1.0f, -0.6f, 0.0f);
             trailGO.transform.position = playerPosition - trailLeftOffset;
         }
+
+        if(rb2D.velocity.x != 0)
+        {
+            playerAnim.SetBool("IsWalking", true);
+        }
+        else
+        {
+            playerAnim.SetBool("IsWalking", false);
+        }
+
+        if(rb2D.velocity.y != 0)
+        {
+            playerAnim.SetBool("IsJumping", true);
+        }
+        else
+        {
+            playerAnim.SetBool("IsJumping", false);
+        }
+        
+        if(playerAnim.GetBool("IsWalking") || playerAnim.GetBool("IsJumping"))
+        {
+            playerAnim.SetBool("IsIdle", false);
+        }
+        else
+        {
+            playerAnim.SetBool("IsIdle", true);
+        }
+
     }
 
     void FixedUpdate()
@@ -75,24 +108,28 @@ public class PlayerController : MonoBehaviour
         if(moveHorizontal > 0.1f || moveHorizontal < -0.1f)
         {
             rb2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
+            /*
             playerAnim.SetBool("IsIdle", false);
             playerAnim.SetBool("IsWalking", true);
             playerAnim.SetBool("IsJumping", false);
-
+            */
         }
         else if (!isJumping && moveVertical > 0.1f)
         {
             rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
+            /*
             playerAnim.SetBool("IsIdle", false);
             playerAnim.SetBool("IsWalking", false);
             playerAnim.SetBool("IsJumping", true);
-            
+            */
         }
         else
         {
+            /*
             playerAnim.SetBool("IsIdle", true);
             playerAnim.SetBool("IsWalking", false);
             playerAnim.SetBool("IsJumping", false);
+            */
         }
     }
 
@@ -101,6 +138,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag == "Platform")
         {
             isJumping = false;
+            //playerAnim.SetBool("IsJumping", false);
         }
     }
     void OnTriggerExit2D(Collider2D collision)
