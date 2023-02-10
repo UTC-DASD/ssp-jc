@@ -65,14 +65,7 @@ public class PlayerController : MonoBehaviour
 
         if(playerSprite.flipX)
         {
-            Vector3 trailRightOffset = new Vector3 (-1.0f, -0.6f, 0.0f);
-            trailGO.transform.position = playerPosition - trailRightOffset;
-        }
-        else
-        {
-            Vector3 trailLeftOffset = new Vector3 (1.0f, -0.6f, 0.0f);
-            trailGO.transform.position = playerPosition - trailLeftOffset;
-        }
+           
 
         if(rb2D.velocity.x != 0)
         {
