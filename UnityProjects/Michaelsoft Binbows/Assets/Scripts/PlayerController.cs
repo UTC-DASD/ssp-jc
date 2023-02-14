@@ -63,8 +63,8 @@ public class PlayerController : MonoBehaviour
             //trailGO.transform.position = new Vector3 (1.8f, 1, 0.0f);
         }
 
-        if(playerSprite.flipX)
-        {
+        //if(playerSprite.flipX)
+        //{
            
 
         if(rb2D.velocity.x != 0)

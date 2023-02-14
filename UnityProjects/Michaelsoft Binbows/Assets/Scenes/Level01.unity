@@ -918,7 +918,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a188a9519d7eae49a9fd9eb776df3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 1
 --- !u!61 &152119235
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1681,7 +1680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a188a9519d7eae49a9fd9eb776df3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 0
 --- !u!61 &273334740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1692,7 +1690,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1726,7 +1724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &280375436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3668,7 +3666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a188a9519d7eae49a9fd9eb776df3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 1
 --- !u!1001 &872015329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4394,7 +4391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a188a9519d7eae49a9fd9eb776df3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 0
 --- !u!61 &1065505718
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4405,7 +4401,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6321,7 +6317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a188a9519d7eae49a9fd9eb776df3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 0
 --- !u!1 &1587523080
 GameObject:
   m_ObjectHideFlags: 0
@@ -6685,7 +6680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a188a9519d7eae49a9fd9eb776df3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 0
 --- !u!61 &1612959705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6696,7 +6690,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -7591,7 +7585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a188a9519d7eae49a9fd9eb776df3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 0
 --- !u!61 &1789447623
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9408,7 +9401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a188a9519d7eae49a9fd9eb776df3fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 1
 --- !u!1001 &2105161198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9661,7 +9653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2131553035
 MonoBehaviour:
   m_ObjectHideFlags: 0
